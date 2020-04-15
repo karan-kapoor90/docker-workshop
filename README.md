@@ -18,7 +18,7 @@ Application URL: http://localhost:{port-on-your-host}/
 
 ## Specifying a custom port number
 
-`docker run -p 30000:3000 --name my-app karankapoor/docker-workshop:latest`
+`docker run -d -p 30000:3000 --name my-app karankapoor/docker-workshop:latest`
 
 This will run the application container and expose it on port 30000 of the host machine.
 
