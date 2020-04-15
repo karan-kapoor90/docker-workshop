@@ -1,13 +1,12 @@
 FROM node:13-alpine
 
-COPY package-lock.json package-lock.json
+COPY package.json package.json
 
 RUN npm install
 
 COPY . .
 
-ARG app-port
-ENV PORT=$app-port
-
 ENTRYPOINT ["node"]
 CMD ["index.js"]
+
+EXPOSE 3000

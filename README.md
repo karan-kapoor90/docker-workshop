@@ -4,9 +4,9 @@ This is a simple nodejs app meant for a short and sweet getting started with Doc
 
 ## Simple run instructions
 
-`docker run karankapoor/docker-workshop:latest`
+`docker run -dP karankapoor/docker-workshop:latest`
 
-Then look for the port that the container is exposing on:
+Then look for the port that the container is exposing on a random port on the host. You can get the port using the command:
 
 `docker ps`
 
@@ -18,7 +18,7 @@ Application URL: http://localhost:{port-on-your-host}/
 
 ## Specifying a custom port number
 
-`docker run -e PORT=30000 --name my-app karankapoor/docker-workshop:latest`
+`docker run -p 30000:3000 --name my-app karankapoor/docker-workshop:latest`
 
 This will run the application container and expose it on port 30000 of the host machine.
 
