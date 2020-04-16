@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    tier: web
+  name: workshop-deploy
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: workshop-deploy
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: workshop-deploy
+    spec:
+      containers:
+      - image: karankapoor/docker-workshop:latest
+        name: docker-workshop
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 3000
+        resources: {}
+
