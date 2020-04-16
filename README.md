@@ -31,3 +31,24 @@ Application URL: http://localhost:30000/
 - `/hello` - GET endpoint that responds with a simple hello message.
 
 Happy learning!!
+
+## To run the app on a k8s cluster
+
+Create a deployment running this pod. You could use the image from your own docker hub repo or use mine as coded in the kubernetes yaml file.
+
+```bash
+# create the deployment with the pods
+kubectl create -f kube/workshop-deploy.yaml
+
+# expose the deployment as a nodeport service 
+kubectl create -f kube/workshop-service.yaml
+
+# inspect the resources you just created
+kubectl get all
+```
+
+
+
+> *Bonus tip*: To see a truly beautiful automatic deployment experience, create an account at https://console.run.pivotal.io; follow the steps to create an org and an environment, setup cf CLI on your machine and login on the cli using cf login, and try pushing the app you created.
+
+`cf push docker-workshop -c "node index.js"`
