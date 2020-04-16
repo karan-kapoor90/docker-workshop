@@ -35,6 +35,7 @@ Happy learning!!
 ## To run the app on a k8s cluster
 
 Create a deployment running this pod. You could use the image from your own docker hub repo or use mine as coded in the kubernetes yaml file.
+For the complete guide, [see this](https://karankapoor.in/articles/kubernetes-workshop).
 
 ```bash
 # create the deployment with the pods
