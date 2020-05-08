@@ -3,8 +3,7 @@ kind: Service
 metadata:
   labels:
     tier: web
-  name: workshop-deploy
-  namespace: default
+  name: tenant-details-svc
 spec:
   externalTrafficPolicy: Cluster
   ports:
@@ -13,6 +12,6 @@ spec:
     protocol: TCP
     targetPort: 3000
   selector:
-    app: workshop-deploy
+    app: tenant-details
   sessionAffinity: None
   type: NodePort
