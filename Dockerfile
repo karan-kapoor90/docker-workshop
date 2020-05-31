@@ -7,9 +7,6 @@ RUN npm install
 
 COPY . .
 
-ENV NAME=${name}
-ENV ID=${id}
-
 ENTRYPOINT ["node"]
 CMD ["index.js"]
 

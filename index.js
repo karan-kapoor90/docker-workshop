@@ -7,8 +7,8 @@ const id = process.env.id || 'default_id'
 
 app.use('/', express.static(path.join(__dirname, 'public')))
 
-app.get('/details', (req, res) => {
-    res.send({'tenantName':name,'tenantID':id});
+app.get('/hello', (req, res) => {
+    res.send({message: 'Hello my friend!'});
 });
 
 app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`))
